@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 :root {
-  --color-ink: #111111;
+  --color-ink: #080808;
   --color-cream: #faf9f6;
   --color-warm-gray: #8a8580;
   --color-gold: #c4a265;
@@ -47,250 +47,29 @@ body {
   scroll-snap-align: start;
 }
 
-/* Tuxedo constructed with CSS */
-.tuxedo {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-}
-
-.tuxedo-body {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  height: 100%;
-}
-
-/* Shirt (white V behind the jacket) */
-.shirt {
-  position: absolute;
-  top: 18%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 120px solid transparent;
-  border-right: 120px solid transparent;
-  border-bottom: 600px solid #f5f5f0;
-  z-index: 1;
-  animation: shirtReveal 1.2s ease-out 0.3s both;
-}
-
-@keyframes shirtReveal {
-  from {
-    opacity: 0;
-    border-bottom-width: 0;
-  }
-  to {
-    opacity: 1;
-    border-bottom-width: 600px;
-  }
-}
-
-/* Left lapel */
-.lapel-left {
-  position: absolute;
-  top: 16%;
-  right: 50%;
-  width: 50%;
-  height: 84%;
-  background: #1a1a1a;
-  clip-path: polygon(100% 0, 100% 5%, 55% 100%, 0 100%, 0 0);
-  z-index: 2;
-  animation: lapelLeftSlide 1s ease-out 0.5s both;
-}
-
-@keyframes lapelLeftSlide {
-  from {
-    transform: translateX(-30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Right lapel */
-.lapel-right {
-  position: absolute;
-  top: 16%;
-  left: 50%;
-  width: 50%;
-  height: 84%;
-  background: #1a1a1a;
-  clip-path: polygon(0 0, 0 5%, 45% 100%, 100% 100%, 100% 0);
-  z-index: 2;
-  animation: lapelRightSlide 1s ease-out 0.5s both;
-}
-
-@keyframes lapelRightSlide {
-  from {
-    transform: translateX(30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Lapel fold lines (satin edge) */
-.lapel-left::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 3px;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(255, 255, 255, 0.06) 10%,
-    rgba(255, 255, 255, 0.1) 50%,
-    rgba(255, 255, 255, 0.03)
-  );
-  transform-origin: top right;
-  transform: rotate(-7deg);
-}
-
-.lapel-right::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 3px;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    rgba(255, 255, 255, 0.06) 10%,
-    rgba(255, 255, 255, 0.1) 50%,
-    rgba(255, 255, 255, 0.03)
-  );
-  transform-origin: top left;
-  transform: rotate(7deg);
-}
-
-/* Bow tie */
-.bowtie {
-  position: absolute;
-  top: 18%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
-  animation: bowtieAppear 0.6s ease-out 1s both;
-}
-
-@keyframes bowtieAppear {
-  from {
-    transform: translateX(-50%) scale(0) rotate(-180deg);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(-50%) scale(1) rotate(0deg);
-    opacity: 1;
-  }
-}
-
-.bowtie-left {
-  position: absolute;
-  right: 6px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-top: 14px solid transparent;
-  border-bottom: 14px solid transparent;
-  border-right: 26px solid #1a1a1a;
-}
-
-.bowtie-right {
-  position: absolute;
-  left: 6px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-top: 14px solid transparent;
-  border-bottom: 14px solid transparent;
-  border-left: 26px solid #1a1a1a;
-}
-
-.bowtie-knot {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 12px;
-  height: 10px;
-  background: #222;
-  border-radius: 2px;
-  z-index: 1;
-}
-
-/* Shirt buttons */
-.shirt-buttons {
-  position: absolute;
-  top: 24%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 42px;
-  animation: buttonsAppear 0.8s ease-out 1.2s both;
-}
-
-@keyframes buttonsAppear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.shirt-button {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #e8e5df;
-  border: 1px solid #d5d0c8;
-}
-
-/* Pocket square */
-.pocket-square {
-  position: absolute;
-  top: 36%;
-  left: calc(50% + 58px);
-  width: 24px;
-  height: 18px;
-  z-index: 3;
-  animation: pocketAppear 0.5s ease-out 1.4s both;
-}
-
-@keyframes pocketAppear {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.pocket-square::before {
-  content: "";
+/* Hero tuxedo image */
+.hero-image {
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
   height: 100%;
-  background: white;
-  clip-path: polygon(15% 40%, 40% 0%, 60% 30%, 85% 0%, 85% 100%, 15% 100%);
+  max-width: none;
+  object-fit: contain;
+  z-index: 1;
+  animation: heroImageReveal 1.2s ease-out 0.3s both;
+}
+
+@keyframes heroImageReveal {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
 }
 
 /* Hero text overlay */
@@ -411,27 +190,12 @@ body {
   padding: 0 16px;
 }
 
-/* Decorative line */
-.ornament {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  margin-bottom: 48px;
-  animation: ornamentFade 1s ease-out both;
-}
-
-.ornament-line {
-  width: 60px;
-  height: 1px;
-  background: var(--color-gold);
-}
-
-.ornament-diamond {
-  width: 8px;
-  height: 8px;
-  background: var(--color-gold);
-  transform: rotate(45deg);
+/* Details bowtie image */
+.details-bowtie {
+  width: 180px;
+  height: auto;
+  margin: 0 auto 48px;
+  object-fit: contain;
 }
 
 .details-title {
@@ -579,25 +343,8 @@ body {
 
 /* Mobile adjustments */
 @media (max-width: 480px) {
-  .shirt {
-    border-left-width: 80px;
-    border-right-width: 80px;
-    border-bottom-width: 500px;
-  }
-
-  @keyframes shirtReveal {
-    from {
-      opacity: 0;
-      border-bottom-width: 0;
-    }
-    to {
-      opacity: 1;
-      border-bottom-width: 500px;
-    }
-  }
-
-  .pocket-square {
-    left: calc(50% + 40px);
+  .hero-image {
+    height: 100%;
   }
 
   .hero-text {
@@ -606,5 +353,9 @@ body {
 
   .details-section {
     padding: 60px 20px;
+  }
+
+  .details-bowtie {
+    width: 140px;
   }
 }

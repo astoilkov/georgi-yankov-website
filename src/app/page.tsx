@@ -36,7 +36,7 @@ export default function Home() {
           src="/tuxedo-hero.png"
           alt=""
           width={864}
-          height={1010}
+          height={1004}
           className="hero-image"
           priority
         />
