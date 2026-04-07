@@ -1,3 +1,10 @@
+## Tech Stack
+
+- Next.js
+- Tailwind CSS
+- TypeScript
+- Bun
+
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
 

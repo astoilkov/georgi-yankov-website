@@ -28,50 +28,59 @@ export default function Home() {
 
   return (
     <>
-      <div className="grain-overlay" />
+      <div className="grain-overlay fixed inset-0 pointer-events-none z-100 opacity-[0.03] bg-repeat bg-size-[256px]" />
 
       {/* Hero — Tuxedo Cover */}
-      <section className="hero-section">
+      <section className="relative w-full h-dvh bg-foreground flex items-end justify-center overflow-hidden snap-start">
         <Image
           src="/tuxedo.svg"
           alt=""
-          width={864}
-          height={1004}
-          className="hero-image"
+          width={369}
+          height={455}
+          className="absolute bottom-0 -left-50 sm:left-1/2 sm:-translate-x-1/2 w-auto h-full max-w-none object-cover animate-[heroImageReveal_1.2s_ease-out_0.3s_both]"
           priority
         />
 
-        <div className="hero-text">
-          <div className="hero-label">Покана</div>
-          <div className="hero-sublabel">за абитуриентски бал</div>
-          <div className="hero-name">на Георги Янков</div>
+        <div className="relative z-10 text-center animate-[heroTextUp_1s_ease-out_0.8s_both]">
+          <div className="font-(--font-display) text-[clamp(2rem,5vw,3.2rem)] text-white tracking-[0.15em] uppercase leading-[1.1] mb-1">
+            Покана
+          </div>
+          <div className="font-(--font-body) text-[clamp(0.85rem,2vw,1.1rem)] text-white/70 tracking-[0.3em] uppercase mb-1.5">
+            за абитуриентски бал
+          </div>
+          <div className="font-(--font-display) text-[clamp(1rem,2.5vw,1.3rem)] text-(--color-gold) tracking-[0.2em] uppercase">
+            на Георги Янков
+          </div>
         </div>
 
-        <div className="scroll-hint">
-          <div className="scroll-hint-line" />
-          <div className="scroll-hint-dot" />
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 animate-[scrollPulse_2s_ease-in-out_2s_infinite,fadeInUp_1s_ease-out_2s_both]">
+          <div className="h-8 w-px bg-linear-to-b from-transparent to-(--color-gold)" />
+          <div className="size-1 rounded-full bg-(--color-gold)" />
         </div>
       </section>
 
       {/* Details Section */}
-      <section className="details-section" ref={detailsRef}>
-        <div className="details-card">
+      <section
+        className="relative w-full min-h-dvh bg-background flex items-center justify-center py-[60px] px-5 sm:py-20 sm:px-6 snap-start"
+        ref={detailsRef}
+      >
+        <div className="max-w-[520px] w-full text-center px-4 flex flex-col items-center gap-4">
           <Image
             src="/bowtie.svg"
             alt=""
             width={864}
             height={190}
-            className="details-bowtie reveal"
+            className="w-[180px] h-auto mx-auto mb-12 object-contain right-0 absolute top-10"
           />
 
-          <h1 className="details-title reveal reveal-delay-1">
+          <h1 className="font-[var(--font-display)] text-[clamp(1.6rem,4vw,2.2rem)] font-bold tracking-[0.12em] uppercase text-[var(--color-ink)] mb-2 reveal reveal-delay-1">
             Абитуриентски бал
           </h1>
-          <p className="details-subtitle reveal reveal-delay-1">
+          <p className="font-[var(--font-body)] text-[clamp(0.9rem,2vw,1.1rem)] font-normal tracking-[0.25em] uppercase text-[var(--color-warm-gray)] mb-12 reveal reveal-delay-1">
             на Георги Янков
           </p>
 
-          <p className="details-message reveal reveal-delay-2">
+          <p className="font-[var(--font-body)] text-[clamp(1.05rem,2.5vw,1.25rem)] font-normal leading-[1.8] text-[#444] mb-5 italic reveal reveal-delay-2">
             Училището свършва,
             <br />
             но истинското приключение
@@ -79,38 +88,50 @@ export default function Home() {
             тепърва започва!
           </p>
 
-          <p className="details-invite reveal reveal-delay-3">
+          <p className="font-[var(--font-body)] text-[clamp(1rem,2.2vw,1.15rem)] font-normal leading-[1.8] text-[#555] mb-12 reveal reveal-delay-3">
             Каня ви на моя абитуриентски бал, за да
             <br />
             вдигнем наздравица за всичко, което предстои.
           </p>
 
-          <div className="event-info reveal reveal-delay-4">
-            <div className="event-info-row">
-              <span className="event-info-label">Дата:</span>
-              <span className="event-info-value">16 май</span>
+          <div className="flex flex-col gap-2.5 mb-12 reveal reveal-delay-4">
+            <div className="flex justify-center gap-4 font-[var(--font-body)] text-[clamp(1rem,2vw,1.15rem)]">
+              <span className="font-semibold text-[var(--color-ink)] text-right min-w-[100px] tracking-[0.05em]">
+                Дата:
+              </span>
+              <span className="font-normal text-[#555] text-left min-w-[160px]">
+                16 май
+              </span>
             </div>
-            <div className="event-info-row">
-              <span className="event-info-label">Старт:</span>
-              <span className="event-info-value">19:00 ч.</span>
+            <div className="flex justify-center gap-4 font-[var(--font-body)] text-[clamp(1rem,2vw,1.15rem)]">
+              <span className="font-semibold text-[var(--color-ink)] text-right min-w-[100px] tracking-[0.05em]">
+                Старт:
+              </span>
+              <span className="font-normal text-[#555] text-left min-w-[160px]">
+                19:00 ч.
+              </span>
             </div>
-            <div className="event-info-row">
-              <span className="event-info-label">Локация:</span>
-              <span className="event-info-value">
+            <div className="flex justify-center gap-4 font-[var(--font-body)] text-[clamp(1rem,2vw,1.15rem)]">
+              <span className="font-semibold text-[var(--color-ink)] text-right min-w-[100px] tracking-[0.05em]">
+                Локация:
+              </span>
+              <span className="font-normal text-[#555] text-left min-w-[160px]">
                 Ресторант &ldquo;Каменец&rdquo;
               </span>
             </div>
           </div>
 
-          <div className="closing-divider reveal reveal-delay-5" />
+          <div className="w-10 h-px bg-[var(--color-gold)] mx-auto mb-10 reveal reveal-delay-5" />
 
-          <p className="closing-message reveal reveal-delay-6">
+          <p className="font-[var(--font-body)] text-[clamp(1rem,2.2vw,1.1rem)] font-normal leading-[1.9] text-[var(--color-gold)] italic mb-10 reveal reveal-delay-6">
             Ще има музика, спомени и много танци.
             <br />
             Без вас няма да е същото!
           </p>
 
-          <div className="signature reveal reveal-delay-7">Георги Янков</div>
+          <div className="font-[var(--font-display)] text-[clamp(1.3rem,3vw,1.6rem)] font-medium italic text-[var(--color-ink)] tracking-[0.05em] reveal reveal-delay-7">
+            Георги Янков
+          </div>
         </div>
       </section>
     </>
