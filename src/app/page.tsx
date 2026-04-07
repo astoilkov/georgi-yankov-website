@@ -70,7 +70,7 @@ export default function Home() {
             alt=""
             width={864}
             height={190}
-            className="w-[180px] h-auto mx-auto object-contain right-0 absolute top-0 sm:static"
+            className="absolute top-4 right-4 w-[100px] h-auto object-contain sm:relative sm:top-auto sm:right-auto sm:w-[180px] sm:mx-auto"
           />
 
           <div>
