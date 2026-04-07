@@ -33,7 +33,7 @@ export default function Home() {
       {/* Hero — Tuxedo Cover */}
       <section className="hero-section">
         <Image
-          src="/tuxedo-hero.png"
+          src="/tuxedo.svg"
           alt=""
           width={864}
           height={1004}
@@ -57,7 +57,7 @@ export default function Home() {
       <section className="details-section" ref={detailsRef}>
         <div className="details-card">
           <Image
-            src="/bowtie-detail.png"
+            src="/bowtie.svg"
             alt=""
             width={864}
             height={190}
