@@ -42,7 +42,7 @@ export default function Home() {
           alt=""
           width={369}
           height={455}
-          className="absolute bottom-0 -left-20 sm:left-1/2 sm:-translate-x-1/2 w-auto h-full max-w-none object-cover animate-[heroImageReveal_1.2s_ease-out_0.3s_both]"
+          className="absolute bottom-0 -left-[40%] sm:left-1/2 sm:-translate-x-1/2 w-auto h-full max-w-none object-cover animate-[heroImageReveal_1.2s_ease-out_0.3s_both]"
           priority
         />
 
@@ -61,7 +61,7 @@ export default function Home() {
 
       {/* Details Section */}
       <section
-        className="relative w-full min-h-dvh bg-background flex items-center justify-center py-[60px] px-5 sm:py-20 sm:px-6 snap-start"
+        className="relative w-full min-h-dvh bg-background flex items-center justify-center py-[75px] px-5 sm:py-20 sm:px-6 snap-start"
         ref={detailsRef}
       >
         <div className="max-w-[520px] w-full text-center px-4 flex flex-col items-center gap-6">
@@ -162,9 +162,6 @@ export default function Home() {
           </div>
 
           <div className="text-center">
-            <p className="text-[clamp(1.3rem,3.2vw,1.8rem)] font-medium tracking-[0.18em] uppercase text-[var(--color-gold)] opacity-0 translate-y-3 transition-all duration-700 ease-out delay-500 group-[.visible]:opacity-100 group-[.visible]:translate-y-0">
-              Георги Янков
-            </p>
             <p className="text-[clamp(0.75rem,1.6vw,0.9rem)] tracking-[0.35em] uppercase text-white/40 mt-1 opacity-0 translate-y-3 transition-all duration-700 ease-out delay-700 group-[.visible]:opacity-100 group-[.visible]:translate-y-0">
               Випуск 2026
             </p>
