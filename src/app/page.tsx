@@ -59,23 +59,25 @@ export default function Home() {
         className="relative w-full min-h-dvh bg-background flex items-center justify-center py-[60px] px-5 sm:py-20 sm:px-6 snap-start"
         ref={detailsRef}
       >
-        <div className="max-w-[520px] w-full text-center px-4 flex flex-col items-center gap-4">
+        <div className="max-w-[520px] w-full text-center px-4 flex flex-col items-center gap-6">
           <Image
             src="/bowtie.svg"
             alt=""
             width={864}
             height={190}
-            className="w-[180px] h-auto mx-auto mb-12 object-contain right-0 absolute top-0"
+            className="w-[180px] h-auto mx-auto object-contain right-0 absolute top-0 sm:static"
           />
 
-          <h1 className="text-[clamp(1.6rem,4vw,2.2rem)] font-bold tracking-[0.12em] uppercase text-[var(--color-ink)] mb-2 reveal reveal-delay-1">
-            Абитуриентски бал
-          </h1>
-          <p className="text-[clamp(0.9rem,2vw,1.1rem)] font-normal tracking-[0.25em] uppercase text-[var(--color-warm-gray)] mb-12 reveal reveal-delay-1">
-            на Георги Янков
-          </p>
+          <div>
+            <h1 className="text-[clamp(1.6rem,4vw,2.2rem)] font-bold tracking-[0.12em] uppercase text-[var(--color-ink)] reveal reveal-delay-1">
+              Абитуриентски бал
+            </h1>
+            <p className="text-[clamp(0.9rem,2vw,1.1rem)] font-normal tracking-[0.25em] uppercase text-[var(--color-warm-gray)] reveal reveal-delay-1">
+              на Георги Янков
+            </p>
+          </div>
 
-          <p className="text-[clamp(1.05rem,2.5vw,1.25rem)] font-normal leading-[1.8] text-[#444] mb-5 italic reveal reveal-delay-2">
+          <p className="text-[clamp(1.05rem,2.5vw,1.25rem)] font-normal leading-[1.8] text-[#444] italic reveal reveal-delay-2">
             Училището свършва,
             <br />
             но истинското приключение
@@ -83,13 +85,13 @@ export default function Home() {
             тепърва започва!
           </p>
 
-          <p className="text-[clamp(1rem,2.2vw,1.15rem)] font-normal leading-[1.8] text-[#555] mb-12 reveal reveal-delay-3">
+          <p className="text-[clamp(1rem,2.2vw,1.15rem)] font-normal leading-[1.8] text-[#555] reveal reveal-delay-3">
             Каня ви на моя абитуриентски бал, за да
             <br />
             вдигнем наздравица за всичко, което предстои.
           </p>
 
-          <div className="flex flex-col gap-2.5 mb-12 reveal reveal-delay-4">
+          <div className="flex flex-col gap-2.5 reveal reveal-delay-4">
             <div className="flex justify-center gap-4 text-[clamp(1rem,2vw,1.15rem)]">
               <span className="font-semibold text-[var(--color-ink)] text-right min-w-[100px] tracking-[0.05em]">
                 Дата:
@@ -116,9 +118,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="w-10 h-px bg-[var(--color-gold)] mx-auto mb-10 reveal reveal-delay-5" />
+          <div className="w-10 h-px bg-[var(--color-gold)] mx-auto reveal reveal-delay-5" />
 
-          <p className="text-[clamp(1rem,2.2vw,1.1rem)] font-normal leading-[1.9] text-[var(--color-gold)] italic mb-10 reveal reveal-delay-6">
+          <p className="text-[clamp(1rem,2.2vw,1.1rem)] font-normal leading-[1.9] text-[var(--color-gold)] italic reveal reveal-delay-6">
             Ще има музика, спомени и много танци.
             <br />
             Без вас няма да е същото!
