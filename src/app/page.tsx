@@ -31,7 +31,7 @@ export default function Home() {
       <div className="grain-overlay fixed inset-0 pointer-events-none z-100 opacity-[0.03] bg-repeat bg-size-[256px]" />
 
       {/* Hero — Tuxedo Cover */}
-      <section className="relative w-full h-dvh bg-foreground flex items-end justify-center overflow-hidden snap-start">
+      <section className="relative w-full h-dvh bg-foreground flex items-end justify-start overflow-hidden snap-start">
         <Image
           src="/tuxedo.svg"
           alt=""
@@ -41,7 +41,7 @@ export default function Home() {
           priority
         />
 
-        <div className="relative z-10 text-center animate-[heroTextUp_1s_ease-out_0.8s_both]">
+        <div className="relative z-10 text-left p-6 animate-[heroTextUp_1s_ease-out_0.8s_both]">
           <div className="text-[clamp(2rem,5vw,3.2rem)] text-white tracking-[0.15em] uppercase leading-[1.1] mb-1">
             Покана
           </div>
@@ -51,11 +51,6 @@ export default function Home() {
           <div className="text-[clamp(1rem,2.5vw,1.3rem)] text-(--color-gold) tracking-[0.2em] uppercase">
             на Георги Янков
           </div>
-        </div>
-
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 animate-[scrollPulse_2s_ease-in-out_2s_infinite,fadeInUp_1s_ease-out_2s_both]">
-          <div className="h-8 w-px bg-linear-to-b from-transparent to-(--color-gold)" />
-          <div className="size-1 rounded-full bg-(--color-gold)" />
         </div>
       </section>
 
