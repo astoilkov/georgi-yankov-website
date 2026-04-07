@@ -42,7 +42,7 @@ export default function Home() {
           alt=""
           width={369}
           height={455}
-          className="absolute bottom-0 -left-50 sm:left-1/2 sm:-translate-x-1/2 w-auto h-full max-w-none object-cover animate-[heroImageReveal_1.2s_ease-out_0.3s_both]"
+          className="absolute bottom-0 -left-20 sm:left-1/2 sm:-translate-x-1/2 w-auto h-full max-w-none object-cover animate-[heroImageReveal_1.2s_ease-out_0.3s_both]"
           priority
         />
 
