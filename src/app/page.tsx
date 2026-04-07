@@ -36,7 +36,7 @@ export default function Home() {
       <div className="grain-overlay fixed inset-0 pointer-events-none z-100 opacity-[0.03] bg-repeat bg-size-[256px]" />
 
       {/* Hero — Tuxedo Cover */}
-      <section className="relative w-full h-dvh bg-foreground flex items-end justify-start sm:justify-center overflow-hidden snap-start">
+      <section className="relative w-full h-dvh bg-foreground flex items-end justify-start sm:justify-center overflow-hidden">
         <Image
           src="/tuxedo.svg"
           alt=""
@@ -61,7 +61,7 @@ export default function Home() {
 
       {/* Details Section */}
       <section
-        className="relative w-full min-h-dvh bg-background flex items-center justify-center py-[75px] px-5 sm:py-20 sm:px-6 snap-start"
+        className="relative w-full min-h-dvh bg-background flex items-center justify-center py-[75px] px-5 sm:py-20 sm:px-6"
         ref={detailsRef}
       >
         <div className="max-w-[520px] w-full text-center px-4 flex flex-col items-center gap-6">
@@ -139,7 +139,7 @@ export default function Home() {
 
       {/* Portrait — The Man of the Hour */}
       <section
-        className="group relative w-full h-dvh bg-[#0a0608] flex items-center justify-center overflow-hidden snap-start"
+        className="group relative w-full h-dvh bg-[#0a0608] flex items-center justify-center overflow-hidden"
         ref={portraitRef}
       >
         {/* Ambient red glow to echo the curtain */}
