@@ -42,13 +42,13 @@ export default function Home() {
         />
 
         <div className="relative z-10 text-center animate-[heroTextUp_1s_ease-out_0.8s_both]">
-          <div className="font-(--font-display) text-[clamp(2rem,5vw,3.2rem)] text-white tracking-[0.15em] uppercase leading-[1.1] mb-1">
+          <div className="text-[clamp(2rem,5vw,3.2rem)] text-white tracking-[0.15em] uppercase leading-[1.1] mb-1">
             Покана
           </div>
-          <div className="font-(--font-body) text-[clamp(0.85rem,2vw,1.1rem)] text-white/70 tracking-[0.3em] uppercase mb-1.5">
+          <div className="text-[clamp(0.85rem,2vw,1.1rem)] text-white/70 tracking-[0.3em] uppercase mb-1.5">
             за абитуриентски бал
           </div>
-          <div className="font-(--font-display) text-[clamp(1rem,2.5vw,1.3rem)] text-(--color-gold) tracking-[0.2em] uppercase">
+          <div className="text-[clamp(1rem,2.5vw,1.3rem)] text-(--color-gold) tracking-[0.2em] uppercase">
             на Георги Янков
           </div>
         </div>
@@ -70,17 +70,17 @@ export default function Home() {
             alt=""
             width={864}
             height={190}
-            className="w-[180px] h-auto mx-auto mb-12 object-contain right-0 absolute top-10"
+            className="w-[180px] h-auto mx-auto mb-12 object-contain right-0 absolute top-0"
           />
 
-          <h1 className="font-[var(--font-display)] text-[clamp(1.6rem,4vw,2.2rem)] font-bold tracking-[0.12em] uppercase text-[var(--color-ink)] mb-2 reveal reveal-delay-1">
+          <h1 className="text-[clamp(1.6rem,4vw,2.2rem)] font-bold tracking-[0.12em] uppercase text-[var(--color-ink)] mb-2 reveal reveal-delay-1">
             Абитуриентски бал
           </h1>
-          <p className="font-[var(--font-body)] text-[clamp(0.9rem,2vw,1.1rem)] font-normal tracking-[0.25em] uppercase text-[var(--color-warm-gray)] mb-12 reveal reveal-delay-1">
+          <p className="text-[clamp(0.9rem,2vw,1.1rem)] font-normal tracking-[0.25em] uppercase text-[var(--color-warm-gray)] mb-12 reveal reveal-delay-1">
             на Георги Янков
           </p>
 
-          <p className="font-[var(--font-body)] text-[clamp(1.05rem,2.5vw,1.25rem)] font-normal leading-[1.8] text-[#444] mb-5 italic reveal reveal-delay-2">
+          <p className="text-[clamp(1.05rem,2.5vw,1.25rem)] font-normal leading-[1.8] text-[#444] mb-5 italic reveal reveal-delay-2">
             Училището свършва,
             <br />
             но истинското приключение
@@ -88,14 +88,14 @@ export default function Home() {
             тепърва започва!
           </p>
 
-          <p className="font-[var(--font-body)] text-[clamp(1rem,2.2vw,1.15rem)] font-normal leading-[1.8] text-[#555] mb-12 reveal reveal-delay-3">
+          <p className="text-[clamp(1rem,2.2vw,1.15rem)] font-normal leading-[1.8] text-[#555] mb-12 reveal reveal-delay-3">
             Каня ви на моя абитуриентски бал, за да
             <br />
             вдигнем наздравица за всичко, което предстои.
           </p>
 
           <div className="flex flex-col gap-2.5 mb-12 reveal reveal-delay-4">
-            <div className="flex justify-center gap-4 font-[var(--font-body)] text-[clamp(1rem,2vw,1.15rem)]">
+            <div className="flex justify-center gap-4 text-[clamp(1rem,2vw,1.15rem)]">
               <span className="font-semibold text-[var(--color-ink)] text-right min-w-[100px] tracking-[0.05em]">
                 Дата:
               </span>
@@ -103,7 +103,7 @@ export default function Home() {
                 16 май
               </span>
             </div>
-            <div className="flex justify-center gap-4 font-[var(--font-body)] text-[clamp(1rem,2vw,1.15rem)]">
+            <div className="flex justify-center gap-4 text-[clamp(1rem,2vw,1.15rem)]">
               <span className="font-semibold text-[var(--color-ink)] text-right min-w-[100px] tracking-[0.05em]">
                 Старт:
               </span>
@@ -111,7 +111,7 @@ export default function Home() {
                 19:00 ч.
               </span>
             </div>
-            <div className="flex justify-center gap-4 font-[var(--font-body)] text-[clamp(1rem,2vw,1.15rem)]">
+            <div className="flex justify-center gap-4 text-[clamp(1rem,2vw,1.15rem)]">
               <span className="font-semibold text-[var(--color-ink)] text-right min-w-[100px] tracking-[0.05em]">
                 Локация:
               </span>
@@ -123,13 +123,13 @@ export default function Home() {
 
           <div className="w-10 h-px bg-[var(--color-gold)] mx-auto mb-10 reveal reveal-delay-5" />
 
-          <p className="font-[var(--font-body)] text-[clamp(1rem,2.2vw,1.1rem)] font-normal leading-[1.9] text-[var(--color-gold)] italic mb-10 reveal reveal-delay-6">
+          <p className="text-[clamp(1rem,2.2vw,1.1rem)] font-normal leading-[1.9] text-[var(--color-gold)] italic mb-10 reveal reveal-delay-6">
             Ще има музика, спомени и много танци.
             <br />
             Без вас няма да е същото!
           </p>
 
-          <div className="font-[var(--font-display)] text-[clamp(1.3rem,3vw,1.6rem)] font-medium italic text-[var(--color-ink)] tracking-[0.05em] reveal reveal-delay-7">
+          <div className="text-[clamp(1.3rem,3vw,1.6rem)] font-medium italic text-[var(--color-ink)] tracking-[0.05em] reveal reveal-delay-7">
             Георги Янков
           </div>
         </div>
